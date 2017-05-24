@@ -101,16 +101,32 @@
 	<script src="js/ros3d.min.js"></script>
 	<script src="js/bundle.js"></script>
 	<script src="js/widgets.bundle.js"></script>
+    <!-- Teleop JavaScript -->
+	<script type="text/javascript" src="http://cdn.robotwebtools.org/keyboardteleopjs/current/keyboardteleop.min.js"></script>
+    <script type="text/javascript">
+  /**
+   * Setup all GUI elements when the page is loaded.
+   */
+  function init() {
 
+    // Initialize the teleop.
+    var teleop = new KEYBOARDTELEOP.Teleop({
+      ros : ros,
+      topic : '/cmd_vel'
+    });
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGir7uuIvdEOH24VRmNcDCUCHSwmWS6No" async defer></script>
+    teleop.scale = 1.0;
+  }
+</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIe3mq8nE0pox2L96aR5MoHXoxa6-0UE4" async defer></script>
 	<script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-33098700-5', 'auto');
+    ga('create', 'UA-99750747-1', 'auto');
     ga('send', 'pageview');
   </script>
 </body>
