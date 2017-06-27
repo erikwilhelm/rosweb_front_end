@@ -776,7 +776,7 @@ class WidgetInstance {
         workspace_1.currentWorkspace.create(this);
         // this.WidgetCallbackClass = instance_loader.getInstance<any>(window, "Widget" + widget.alias, this.id);
         this.WidgetCallbackClass = new window["Widget" + widget.alias](this.id);
-        frontend_1.frontend.insertWidgetInstance(this, this.WidgetCallbackClass["clbkCreated"]);
+        frontend_1.frontend.insertWidgetInstance(this, () => this.WidgetCallbackClass["clbkCreated"]());
     }
 }
 exports.WidgetInstance = WidgetInstance;
