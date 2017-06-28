@@ -28,6 +28,7 @@ export class WidgetInstance {
     this.WidgetCallbackClass = new window["Widget" + widget.alias](this.id);
 
     frontend.insertWidgetInstance(this, () => this.WidgetCallbackClass.clbkCreated());
+
   }
 
 }
