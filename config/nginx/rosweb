@@ -1,0 +1,16 @@
+server{
+	server_name <your-server-name>;
+
+	listen 80 default;
+	set $site_root <your-path-to-a-static>;
+
+	location / {
+        root $site_root/;
+        try_files $uri /index.html;
+        index index.html;
+	}
+
+	location ~* .+.(jpg|jpeg|png|svg|js|json|css|ttf|woff|woff2|ico)$ {
+	  root $site_root/;
+	}
+}
